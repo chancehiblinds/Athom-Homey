@@ -1,0 +1,39 @@
+{
+  "name": {
+    "en": "iblindsV3"
+  },
+  "class": "blinds",
+  "capabilities": [
+    "measure_battery",
+    "windowcoverings_closed",
+    "onoff",
+    "windowcoverings_tilt_down",
+    "windowcoverings_tilt_set",
+    "windowcoverings_tilt_up"
+  ],
+  "energy": {
+    "batteries": ["INTERNAL"]
+  },
+  "zwave":{
+    "manufacturerId": 647,
+    "productTypeId": [4],
+    "productId": [113,114],
+    "associationGroups": [1],
+    "learnmode":{
+      "instruction":{"en": "Press the IN/EX, or external Charge Adapter button three times"}
+    },
+    "wakeUpInterval": 43200,
+    "defaultConfiguration":[
+      {
+        "id": 1,
+        "size": 1,
+        "value": 22
+      }
+    ]
+  },
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  }
+}

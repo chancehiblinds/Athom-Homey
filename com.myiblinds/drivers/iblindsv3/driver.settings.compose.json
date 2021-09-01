@@ -1,0 +1,67 @@
+[
+{
+    "id": "closeInterval",
+    "type": "number",
+    "label": { "en": "Close Interval" },
+    "value": 22,
+    "attr": { "min": 16,"max": 32 },
+    "hint": {"en":"Auto Calib. Tightness, Lower value = tighter, Higher value = looser...Must be recalibrated"},
+    "zwave": {
+        "index": 1,
+        "size": 1
+    }
+  },
+  {
+    "id": "reverse",
+    "type": "checkbox",
+    "value": false,
+    "label": { "en": "Reverse Direction"},
+    "zwave": {
+        "index": 2,
+        "size": 1
+    }
+  },
+  {
+    "id": "defaultON",
+    "type": "number",
+    "label": { "en": "Default ON Position" },
+    "value": 50,
+    "attr": { "min": 1,"max": 99 },
+    "zwave": {
+        "index": 4,
+        "size": 1
+    }
+  },
+  {
+    "id": "disableReset",
+    "type": "checkbox",
+    "value": false,
+    "label": { "en": "Disable Reset button, used to prevent unintended resets when motor is placed in tight spaces" },
+    "zwave": {
+        "index": 5,
+        "size": 1
+    }
+  },
+  {
+    "id": "speed",
+    "type": "number",
+    "label": { "en": "Speed, How fast iblinds closes" },
+    "value": 50,
+    "attr": { "min": 1,"max": 99 },
+    "units": {"en": "seconds"},
+    "zwave": {
+        "index": 6,
+        "size": 1
+    }
+  },
+  {
+    "id": "remoteCalibration",
+    "type": "checkbox",
+    "value": false,
+    "label": { "en": "Recalibrate upon recieving next command" },
+    "zwave": {
+        "index": 7,
+        "size": 1
+    }
+  }
+]
