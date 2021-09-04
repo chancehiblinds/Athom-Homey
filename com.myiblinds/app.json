@@ -24,6 +24,8 @@
     "name": "Chance H",
     "email": "chance@habhomeintel.com"
   },
+  "support": "mailto:support@myiblinds.com",
+  "homepage": "https://myiblinds.com",
   "drivers": [
     {
       "name": {
