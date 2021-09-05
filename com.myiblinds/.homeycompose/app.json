@@ -23,6 +23,14 @@
     "name": "Chance H",
     "email": "chance@habhomeintel.com"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Chance H.",
+        "email": "chance@habhomeintel.com"
+      }
+    ]
+  },
   "support": "mailto:support@myiblinds.com",
   "homepage": "https://myiblinds.com",
   "source": "https://github.com/chancehiblinds/Athom-Homey",
