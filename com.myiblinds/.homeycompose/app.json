@@ -24,5 +24,9 @@
     "email": "chance@habhomeintel.com"
   },
   "support": "mailto:support@myiblinds.com",
-  "homepage": "https://myiblinds.com"
+  "homepage": "https://myiblinds.com",
+  "source": "https://github.com/chancehiblinds/Athom-Homey",
+  "bugs": {
+    "url": "https://github.com/chancehiblinds/Athom-Homey/issues"
+  }
 }
