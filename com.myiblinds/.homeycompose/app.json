@@ -1,6 +1,6 @@
 {
   "id": "com.myiblinds",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0099e5",
@@ -8,7 +8,7 @@
     "en": "iblinds V3"
   },
   "description": {
-    "en": "Adds support for iblinds V3 devices"
+    "en": "Make your window blinds smart"
   },
   "category": [
     "security"
