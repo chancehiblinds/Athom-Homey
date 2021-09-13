@@ -1,6 +1,6 @@
 'use strict';
 
-const { Device } = require('homey');
+const Homey= require('homey');
 
 class MyDevice extends Homey.Device {
 
