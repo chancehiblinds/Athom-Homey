@@ -7,9 +7,7 @@
     "measure_battery",
     "windowcoverings_closed",
     "onoff",
-    "windowcoverings_tilt_down",
-    "windowcoverings_tilt_set",
-    "windowcoverings_tilt_up"
+    "windowcoverings_tilt_set"
   ],
   "energy": {
     "batteries": ["INTERNAL"]
