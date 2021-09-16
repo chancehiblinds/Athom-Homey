@@ -28,6 +28,7 @@ class iblindsV3 extends ZwaveDevice {
     this.registerCapability('measure_battery','BATTERY');
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('windowcoverings_tilt_set','SWITCH_MULTILEVEL');
+    this.registerCapability('windowcoverings_closed', 'SWITCH_BINARY');
 
 
     /**
