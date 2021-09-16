@@ -40,6 +40,10 @@ class iblindsV3 extends ZwaveDevice {
     this.registerReportListener(
       'SWITCH_BINARY',
       'SWITCH_BINARY_REPORT',
+      'SWITCH_MULTILEVEL',
+      'SWITCH_MULTILEVEL_REPORT',
+      'BATTERY',
+      'BATTERY_REPORT',
       (rawReport, parsedReport) => {
         console.log('registerReportListener', rawReport, parsedReport);
       },
