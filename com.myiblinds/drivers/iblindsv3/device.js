@@ -23,12 +23,12 @@ class iblindsV3 extends ZwaveDevice {
      * "windowcoverings_tilt_down",
      * "windowcoverings_tilt_set" = "SWITCH_MULTILEVEL",
      * "windowcoverings_tilt_up"
+     * "windowcoverings_closed" //This has not been registered to a binary switch and thus is not used
      */
 
     this.registerCapability('measure_battery','BATTERY');
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('windowcoverings_tilt_set','SWITCH_MULTILEVEL');
-    this.registerCapability('windowcoverings_closed', 'SWITCH_BINARY');
 
 
     /**
@@ -52,6 +52,7 @@ class iblindsV3 extends ZwaveDevice {
 
 /**
 * 
+*  registerSetting(settingId, parserFn)
  * TODO this.configurationSet({id: 'Setting id'}, #value)
  * this.configurationSet({index:1, size: 1}, #value)
  */

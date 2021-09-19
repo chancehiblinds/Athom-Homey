@@ -16,5 +16,8 @@
   },
   "1.0.6": {
     "en": "modify device.js to require zwavedriver"
+  },
+  "1.0.7": {
+    "en": "Changes posted in Github"
   }
 }

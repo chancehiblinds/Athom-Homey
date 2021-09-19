@@ -5,7 +5,6 @@
   "class": "blinds",
   "capabilities": [
     "measure_battery",
-    "windowcoverings_closed",
     "onoff",
     "windowcoverings_tilt_set"
   ],
