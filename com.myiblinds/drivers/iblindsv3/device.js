@@ -5,6 +5,7 @@ const Homey = require('homey'); //required for specific ZWave Device not support
 
 class iblindsV3 extends ZwaveDevice {
 
+  //const node = await this.homey.device.getNode(this);
   /**
    * onInit is called when the device is initialized.
    */
@@ -22,7 +23,7 @@ class iblindsV3 extends ZwaveDevice {
      * https://apps-sdk-v3.developer.homey.app/tutorial-device-capabilities.html
      * "measure_battery" = "BATTERY",
      * "onoff" = "SWITCH_BINARY",
-     * "windowcoverings_set" = SWITCH_MULTILEVEL
+     * "windowcoverings_set" = SWITCH_MULTILEVEL Available for flowcards
      * "windowcoverings_tilt_down", //Not desired for application
      * "windowcoverings_tilt_set" = "SWITCH_MULTILEVEL" Not available for flow cards
      * "windowcoverings_tilt_up"  //Not desired for application
@@ -32,7 +33,8 @@ class iblindsV3 extends ZwaveDevice {
     this.registerCapability('measure_battery','BATTERY');
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('windowcoverings_set','SWITCH_MULTILEVEL');
-    //this.registerCapability('windowcovering_closed','SWITCH_BINARY');
+    this.registerCapability('windowcovering_tilt_set','SWITCH_MULTILEVEL');
+    this.registerCapability('windowcoverings_closed','SWITCH_BINARY');
 
 
     /**

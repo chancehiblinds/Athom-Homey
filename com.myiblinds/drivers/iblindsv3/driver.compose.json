@@ -6,7 +6,9 @@
   "capabilities": [
     "measure_battery",
     "onoff",
-    "windowcoverings_set"
+    "windowcoverings_set",
+    "windowcoverings_tilt_set",
+    "windowcoverings_closed"
   ],
   "energy": {
     "batteries": ["INTERNAL"]
