@@ -9,7 +9,7 @@ class iblindsV3 extends ZwaveDevice {
   /**
    * onInit is called when the device is initialized.
    */
-  async onNodeInit() {
+  async onNodeInit({node}) {
     this.log('iblinds V3 has been initialized');
     this.enableDebug();
 
@@ -30,11 +30,17 @@ class iblindsV3 extends ZwaveDevice {
      * "windowcoverings_closed" //This cannot be registered to a binary switch and thus is not used
      */
 
-    this.registerCapability('measure_battery','BATTERY');
+    this.registerCapability('measure_battery','BATTERY', {
+      getOpts: {
+        getOnOnline: true,
+        pollInterval: 'poll_interval',
+      },
+      getParserV3:(value,opts)=>({}),
+    });
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('windowcoverings_set','SWITCH_MULTILEVEL');
     this.registerCapability('windowcovering_tilt_set','SWITCH_MULTILEVEL');
-    this.registerCapability('windowcoverings_closed','SWITCH_BINARY');
+    this.registerCapability('windowcoverings_state','SWITCH_BINARY');
 
 
     /**
@@ -47,14 +53,23 @@ class iblindsV3 extends ZwaveDevice {
     this.registerReportListener(
       'SWITCH_BINARY',
       'SWITCH_BINARY_REPORT',
+      (rawReport, parsedReport) => {
+        console.log('registerReportListener Binary', rawReport, parsedReport);
+      },
+    );
+    this.registerReportListener(
       'SWITCH_MULTILEVEL',
       'SWITCH_MULTILEVEL_REPORT',
+      (rawReport, parsedReport) => {
+        console.log('registerReportListener Multilevel', rawReport, parsedReport);
+      },
+    );
+    this.registerReportListener(
       'BATTERY',
       'BATTERY_GET',
       'BATTERY_REPORT',
-      'BASIC_REPORT',
       (rawReport, parsedReport) => {
-        console.log('registerReportListener', rawReport, parsedReport);
+        console.log('registerReportListener Battery', rawReport, parsedReport);
       },
     );
 
