@@ -1,6 +1,7 @@
 'use strict';
 
 const {ZwaveDevice} = require('homey-zwavedriver');
+const Homey = require('homey'); //required for specific ZWave Device not supported by Athom
 
 class iblindsV3 extends ZwaveDevice {
 
@@ -17,18 +18,21 @@ class iblindsV3 extends ZwaveDevice {
 
     /**
      * Register Capabilities:
-     * 
+     * Provides ability to map Homey capabilities to ZWave Command Classes
+     * https://apps-sdk-v3.developer.homey.app/tutorial-device-capabilities.html
      * "measure_battery" = "BATTERY",
      * "onoff" = "SWITCH_BINARY",
-     * "windowcoverings_tilt_down",
-     * "windowcoverings_tilt_set" = "SWITCH_MULTILEVEL",
-     * "windowcoverings_tilt_up"
-     * "windowcoverings_closed" //This has not been registered to a binary switch and thus is not used
+     * "windowcoverings_set" = SWITCH_MULTILEVEL
+     * "windowcoverings_tilt_down", //Not desired for application
+     * "windowcoverings_tilt_set" = "SWITCH_MULTILEVEL" Not available for flow cards
+     * "windowcoverings_tilt_up"  //Not desired for application
+     * "windowcoverings_closed" //This cannot be registered to a binary switch and thus is not used
      */
 
     this.registerCapability('measure_battery','BATTERY');
     this.registerCapability('onoff', 'SWITCH_BINARY');
-    this.registerCapability('windowcoverings_tilt_set','SWITCH_MULTILEVEL');
+    this.registerCapability('windowcoverings_set','SWITCH_MULTILEVEL');
+    //this.registerCapability('windowcovering_closed','SWITCH_BINARY');
 
 
     /**
@@ -43,7 +47,7 @@ class iblindsV3 extends ZwaveDevice {
       'SWITCH_BINARY_REPORT',
       'SWITCH_MULTILEVEL',
       'SWITCH_MULTILEVEL_REPORT',
-      'BATTERY',
+      'BATTERY_GET',
       'BATTERY_REPORT',
       (rawReport, parsedReport) => {
         console.log('registerReportListener', rawReport, parsedReport);
