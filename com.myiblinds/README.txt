@@ -1,1 +1,1 @@
-iblinds is a motorized retrofit window solution for 2"- 2.5" vertical blinds. This adds driver support for iblinds V3+ devices
+iblinds is a motorized retrofit window solution for 2"- 2.5" venetian blinds. This adds driver support for iblinds V3+ devices
